@@ -7,7 +7,7 @@ import path from 'path';
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: "/portfolio",
+  base: "/",
   plugins: [
     react(),
     tailwindcss(),

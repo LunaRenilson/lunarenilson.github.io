@@ -28,7 +28,7 @@ function Navigator() {
         </Link>
 
         <Link
-          to="/portfolio/projects"
+          to="/projects"
           className="relative group items-center flex flex-col"
         >
           <FaRegFolder
@@ -41,7 +41,7 @@ function Navigator() {
         </Link>
 
         <Link
-          to="/portfolio/contact"
+          to="/contact"
           className="relative group items-center flex flex-col"
         >
           <FiAtSign
