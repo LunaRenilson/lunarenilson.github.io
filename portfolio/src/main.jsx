@@ -6,10 +6,13 @@ import './index.css'
 import App from './App.jsx'
 import ErrorPage from '@pages/ErrorPage.jsx'
 import Contact from '@pages/Contact.jsx'
+import Navigator from './components/Navigator.jsx'
+import Projects from './pages/Projects.jsx'
 
 
 const RootLayout = () => (
   <>
+    <Navigator />
     <Outlet />
   </>
 )
@@ -28,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: '/portfolio/Contact',
         element: <Contact />
+      },
+      {
+        path: '/portfolio/projects',
+        element: <Projects />
       }
   ],
   }
