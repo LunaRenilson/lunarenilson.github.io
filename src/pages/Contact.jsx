@@ -1,16 +1,20 @@
+import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
+
 const Contact = () => (
-     <div style={{ maxWidth: 500, margin: "40px auto", padding: 24, border: "1px solid #ddd", borderRadius: 8 }}>
-          <h1>Contato</h1>
-          <p>Entre em contato comigo:</p>
-          <ul style={{ listStyle: "none", padding: 0 }}>
+     <div className="w-full flex flex-col items-center mt-20 justify-center">
+          <h2 className="text-center bold text-4xl">CONTACT ME</h2>
+          <ul className="contact-list w-fit p-15 border border-gray-300 rounded-lg shadow-md gap-y-5 flex flex-col mt-3 text-xl">
                <li>
-                    <strong>Email:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
+                    <FaEnvelope className="inline mr-2" color="red"/>
+                    <strong>Email:</strong> <a href="mailto:renilson.c.luna@gmail.com" target="_blank" className="hover:text-red-400">renilson.c.luna@gmail.com</a>
                </li>
                <li>
-                    <strong>Telefone:</strong> (99) 99999-9999
+                    <FaPhone className="inline mr-2" />
+                    <strong>Tel:</strong> (19) 99719-3032
                </li>
                <li>
-                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer">linkedin.com/in/seu-perfil</a>
+                    <FaLinkedin className="inline mr-2" color="blue"/>
+                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/renilson-luna" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-500"> linkedin.com/in/renilson-luna</a>
                </li>
           </ul>
      </div>
