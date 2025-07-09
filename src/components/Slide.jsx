@@ -12,7 +12,7 @@ const Slide = ({
   onViewMore,
 }) => {
 return (
-     <div className="slide-container flex items-center gap-50 justify-center p-4 rounded-lg h-full w-full">
+     <div className="slide-container flex items-center justify-center p-4 gap-10 h-full w-full bg-gray-100 shadow-2xl rounded-2xl">
           <section className="project-image flex flex-col gap-y-3">
                {tags && (
                     <ul className="tags-list flex flex-wrap gap-2 mt-2">
@@ -57,7 +57,7 @@ return (
                          </ul>
                     </div>
                </div>
-               <button onClick={onViewMore} className="left-0 flex items-center gap-2 border-b-1 border-gray-600 w-fit">
+               <button className="left-0 flex items-center gap-2 border-b-1 border-gray-600 w-fit">
                     View More <FaArrowRight />
                </button>
           </section>

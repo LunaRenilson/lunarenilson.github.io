@@ -58,7 +58,7 @@ function Navigator() {
 
       <div className="formation w-fit absolute right-0 top-2 flex items-center gap-4">
         <div className="text-right">
-          <p className="font-bold text-2xl">Renilson de Luna</p>
+          <p className="font-bold text-2xl">Renilson Luna</p>
           <p className="text-sm text-gray-600">Computer Engineering </p>
         </div>
         <img src={logoUnicamp} alt="Logo da unicamp" width="75" className="" />

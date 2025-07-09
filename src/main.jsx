@@ -6,14 +6,16 @@ import './index.css'
 import App from './App.jsx'
 import ErrorPage from '@pages/ErrorPage.jsx'
 import Contact from '@pages/Contact.jsx'
-import Navigator from './components/Navigator.jsx'
-import Projects from './pages/Projects.jsx'
+import Navigator from '@components/Navigator.jsx'
+import Projects from '@pages/Projects.jsx'
+import Footer from '@components/Footer.jsx'
 
 
 const RootLayout = () => (
   <>
     <Navigator />
     <Outlet />
+    <Footer />
   </>
 )
 

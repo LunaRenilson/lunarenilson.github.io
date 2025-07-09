@@ -2,16 +2,15 @@ import softwareDevelopment from "@assets/software-development.png";
 import softwareEngineering from "@assets/software-engineering.png";
 import brainstorm from "@assets/brainstorm.png";
 import Carousel from "@components/Carousel";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   const iconSize = 35;
   return (
-    <div className="w-full">
-      <section className="Introducing relative flex flex-col items-center justify-center p-8 bg-gray-900 shadow-lg">
+    <div className="w-full bg-gray-900">
+      <section className="Introducing relative flex flex-col items-center justify-center p-8 ">
         <article className="w-2/3 text-white mt-5 relative justify-center flex flex-col items-center">
           <h1 className="font-bold text-3xl mb-3 text-lef w-full">
-            Hello, I'm Renilson de Luna!
+            Hello, I'm Renilson Luna!
           </h1>
           <p className="text-lg flex w-full text-justify">
             I'm a Computer Engineer student passionate about Software, Machine
@@ -60,68 +59,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <article className="featured-projects w-fit mt-10">
-          <fieldset className="border-1 w-2/3 mx-auto shadow-md p-4 border-gray-200 rounded-md">
-            <legend className="text-3xl">Featured Projects</legend>
+        <hr className="border-white relative"/>
+      <section className="mt-10">
+        <article className="featured-projects flex flex-col items-center justify-center w-full mx-auto">
+          <h2 className="font-bold text-4xl text-white">FEATURED PROJECTS</h2>
+          <div className="w-full mx-auto shadow-md p-4">
             <Carousel />
-          </fieldset>
+          </div> 
         </article>
       </section>
 
-      <footer>
-        <div className="w-full py-6 bg-gray-800 text-gray-300 flex justify-around items-center">
-          <span className="text-sm mb-2">
-            © {new Date().getFullYear()} Renilson de Luna. All rights reserved.
-          </span>
-          <div className="flex gap-4">
-            <a
-              href="https://github.com/lunarenilson"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors group flex items-center"
-            >
-              <FaGithub
-                className="inline mr-2 opacity-0 group-hover:opacity-100 duration-200 bg-white rounded-full"
-                size={20}
-                color="black"
-              />
-              <span className="-translate-x-5 group-hover:translate-x-1 duration-200">
-                GitHub
-              </span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/renilson-luna/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors group flex items-center"
-            >
-              <FaLinkedin
-                className="inline mr-2 opacity-0 group-hover:opacity-100 duration-200 bg-white rounded-full"
-                color="blue"
-                size={20}
-              />
-              <span className="-translate-x-5 group-hover:translate-x-1 duration-200">
-                LinkedIn
-              </span>
-            </a>
-            <a
-              href="mailto:renilson.c.luna@gmail.com"
-              target="_blank"
-              className="hover:text-white transition-colors group flex items-center"
-            >
-              <FaEnvelope
-                className="inline mr-2 opacity-0 group-hover:opacity-100 duration-200"
-                color="red"
-                size={20}
-              />
-              <span className="-translate-x-5 group-hover:translate-x-1 duration-200">
-                Email
-              </span>
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
