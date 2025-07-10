@@ -1,7 +1,7 @@
 import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => (
-     <div className="w-full h-full flex flex-col items-center justify-center">
+     <div className="w-full mt-20 flex flex-col items-center justify-center">
           <h2 className="text-center bold text-4xl">CONTACT ME</h2>
           <ul className="contact-list w-fit p-15 border border-gray-300 rounded-lg shadow-md gap-y-5 flex flex-col mt-3 text-xl">
                <li>

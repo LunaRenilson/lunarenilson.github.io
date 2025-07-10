@@ -2,7 +2,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="w-full relative bottom-0">
+    <footer className="w-full bottom-0 left-0">
       <div className="w-full py-6 bg-gray-800 text-gray-300 flex justify-around items-center">
         <span className="text-sm mb-2">
           © {new Date().getFullYear()} Renilson de Luna. All rights reserved.

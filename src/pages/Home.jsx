@@ -2,6 +2,7 @@ import softwareDevelopment from "@assets/software-development.png";
 import softwareEngineering from "@assets/software-engineering.png";
 import brainstorm from "@assets/brainstorm.png";
 import Carousel from "@components/Carousel";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const iconSize = 35;
@@ -64,10 +65,9 @@ export default function Home() {
           <h2 className="font-bold text-4xl mt-5">FEATURED PROJECTS</h2>
           <div className="w-full mx-auto shadow-md p-4">
             <Carousel />
-          </div> 
+          </div>
         </article>
       </section>
-
     </div>
   );
 }

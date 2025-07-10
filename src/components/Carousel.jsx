@@ -7,7 +7,6 @@ import Autoplay from "embla-carousel-autoplay";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import featuredProjects from "@data/featuredProjects.json";
 
-
 function Carousel() {
   const autoplay = Autoplay({
     delay: 5000,
@@ -36,12 +35,15 @@ function Carousel() {
     setSlideCount(embla.scrollSnapList().length);
     onSelect();
   }, [embla]);
+  
+  const images = import.meta.glob("@assets/*", {
+    eager: true,
+    import: "default",
+  });
 
-  const images = import.meta.glob('@assets/*', { eager: true, import: 'default' });
-
-function getFeaturedImage(img) {
-  return images[`/src/assets/${img}`] || null;
-}
+  function getFeaturedImage(img) {
+    return images[`/src/assets/${img}`] || null;
+  }
 
   return (
     <div

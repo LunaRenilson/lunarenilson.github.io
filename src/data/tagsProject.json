@@ -1,0 +1,289 @@
+[
+  {
+    "id": 1,
+    "tag": "javascript"
+  },
+  {
+    "id": 2,
+    "tag": "typescript"
+  },
+  {
+    "id": 3,
+    "tag": "react"
+  },
+  {
+    "id": 4,
+    "tag": "nextjs"
+  },
+  {
+    "id": 5,
+    "tag": "nodejs"
+  },
+  {
+    "id": 6,
+    "tag": "express"
+  },
+  {
+    "id": 7,
+    "tag": "mongodb"
+  },
+  {
+    "id": 8,
+    "tag": "postgresql"
+  },
+  {
+    "id": 9,
+    "tag": "html"
+  },
+  {
+    "id": 10,
+    "tag": "css"
+  },
+  {
+    "id": 11,
+    "tag": "sass"
+  },
+  {
+    "id": 12,
+    "tag": "tailwind"
+  },
+  {
+    "id": 13,
+    "tag": "bootstrap"
+  },
+  {
+    "id": 14,
+    "tag": "redux"
+  },
+  {
+    "id": 15,
+    "tag": "graphql"
+  },
+  {
+    "id": 16,
+    "tag": "docker"
+  },
+  {
+    "id": 17,
+    "tag": "aws"
+  },
+  {
+    "id": 18,
+    "tag": "firebase"
+  },
+  {
+    "id": 19,
+    "tag": "python"
+  },
+  {
+    "id": 20,
+    "tag": "django"
+  },
+  {
+    "id": 21,
+    "tag": "flask"
+  },
+  {
+    "id": 22,
+    "tag": "java"
+  },
+  {
+    "id": 23,
+    "tag": "software-engineering"
+  },
+  {
+    "id": 24,
+    "tag": "software-development"
+  },
+  {
+    "id": 25,
+    "tag": "mobile"
+  },
+  {
+    "id": 26,
+    "tag": "react-native"
+  },
+  {
+    "id": 27,
+    "tag": "flutter"
+  },
+  {
+    "id": 28,
+    "tag": "ios"
+  },
+  {
+    "id": 29,
+    "tag": "android"
+  },
+  {
+    "id": 30,
+    "tag": "graphql"
+  },
+  {
+    "id": 31,
+    "tag": "api"
+  },
+  {
+    "id": 32,
+    "tag": "rest"
+  },
+  {
+    "id": 33,
+    "tag": "web-scraping"
+  },
+  {
+    "id": 34,
+    "tag": "automation"
+  },
+  {
+    "id": 35,
+    "tag": "testing"
+  },
+  {
+    "id": 36,
+    "tag": "ci-cd"
+  },
+  {
+    "id": 37,
+    "tag": "agile"
+  },
+  {
+    "id": 38,
+    "tag": "scrum"
+  },
+  {
+    "id": 39,
+    "tag": "machine-learning"
+  },
+  {
+    "id": 40,
+    "tag": "artificial-intelligence"
+  },
+  {
+    "id": 41,
+    "tag": "data-science"
+  },
+  {
+    "id": 42,
+    "tag": "data-analysis"
+  },
+  {
+    "id": 43,
+    "tag": "devops"
+  },
+  {
+    "id": 44,
+    "tag": "cloud-computing"
+  },
+  {
+    "id": 45,
+    "tag": "cybersecurity"
+  },
+  {
+    "id": 46,
+    "tag": "web-development"
+  },
+  {
+    "id": 47,
+    "tag": "mobile-development"
+  },
+  {
+    "id": 48,
+    "tag": "frontend"
+  },
+  {
+    "id": 49,
+    "tag": "backend"
+  },
+  {
+    "id": 50,
+    "tag": "fullstack"
+  },
+  {
+    "id": 51,
+    "tag": "ui-ux"
+  },
+  {
+    "id": 52,
+    "tag": "blockchain"
+  },
+  {
+    "id": 53,
+    "tag": "big-data"
+  },
+  {
+    "id": 54,
+    "tag": "computer-vision"
+  },
+  {
+    "id": 55,
+    "tag": "nlp"
+  },
+  {
+    "id": 56,
+    "tag": "robotics"
+  },
+  {
+    "id": 57,
+    "tag": "game-development"
+  },
+  {
+    "id": 58,
+    "tag": "test-automation"
+  },
+  {
+    "id": 59,
+    "tag": "qa"
+  },
+  {
+    "id": 60,
+    "tag": "agile"
+  },
+  {
+    "id": 61,
+    "tag": "scrum"
+  },
+  {
+    "id": 62,
+    "tag": "project-management"
+  },
+  {
+    "id": 63,
+    "tag": "spring"
+  },
+  {
+    "id": 64,
+    "tag": "kotlin"
+  },
+  {
+    "id": 65,
+    "tag": "swift"
+  },
+  {
+    "id": 66,
+    "tag": "android"
+  },
+  {
+    "id": 67,
+    "tag": "ios"
+  },
+  {
+    "id": 68
+  },
+  {
+    "id": 69,
+    "tag": "vue"
+  },
+  {
+    "id": 70,
+    "tag": "nuxt"
+  },
+  {
+    "id": 71,
+    "tag": "angular"
+  },
+  {
+    "id": 72,
+    "tag": "git"
+  }
+]
