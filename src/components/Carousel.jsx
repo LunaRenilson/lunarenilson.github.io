@@ -47,10 +47,10 @@ function Carousel() {
 
   return (
     <div
-      className="embla relative justify-center flex flex-col overflow-hidden"
+      className="embla w-full relative justify-center items-center flex flex-col overflow-hidden"
       ref={emblaRef}
     >
-      <div className="flex">
+      <div className="flex w-10/12">
         {featuredProjects.map((project, index) => (
           <div className={"min-w-[90%] p-3"} key={index}>
             <Slide
