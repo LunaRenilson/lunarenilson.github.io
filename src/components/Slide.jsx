@@ -13,14 +13,14 @@ const Slide = ({
   viewMoreId,
 }) => {
   return (
-    <div className="slide-container flex items-center justify-center p-4 gap-10 h-full w-full  bg-gray-100 border-1 border-gray-300 shadow-2xl rounded-2xl py-10">
+    <div className="slide-container flex items-center justify-center p-4 gap-10 h-full w-full text-white bg-slate-900 border-1 border-gray-300 shadow-2xl rounded-2xl py-10">
       <section className="project-image flex flex-col gap-y-3">
         {tags && (
           <ul className="tags-list flex flex-wrap gap-2 mt-2">
             {tags.map((tag, idx) => (
               <li
                 key={idx}
-                className="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-sm"
+                className="bg-red-200 text-red-800 px-2 py-1 rounded-full text-sm"
               >
                 {tag}
               </li>
@@ -30,7 +30,7 @@ const Slide = ({
 
         <figure className="rounded-2xl h-full p-4 shadow-sm">
           <img src={image} alt={title} width="500" className="rounded" />
-          <figcaption className="text-center text-sm text-gray-600 mt-2">
+          <figcaption className="text-center text-sm text-gray-100 mt-2">
             {imgFigcaption}
           </figcaption>
         </figure>
@@ -59,13 +59,12 @@ const Slide = ({
           </div>
         </div>
 
-        <button className="left-0 my-5 flex items-center gap-2 text-[18px] border-b-1 border-gray-600 w-fit hover:text-blue-500">
-          <Link to={`/projects/${viewMoreId}`} className="">
+        <Link to={`/projects/${viewMoreId}`} className=" w-fit">
+          <button className="left-0 my-5 flex items-center hover:cursor-pointer gap-2 text-[18px] border-b-1 border-gray-600 w-fit hover:text-blue-500">
             View More
-          </Link>
-          <FaArrowRight className="" />
-        </button>
-        
+            <FaArrowRight className="" />
+          </button>
+        </Link>
       </section>
     </div>
   );
