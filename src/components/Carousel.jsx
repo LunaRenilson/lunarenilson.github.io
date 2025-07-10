@@ -1,5 +1,5 @@
 import Slide from "./Slide";
-import softwareEngineering from "@assets/software-engineering.png";
+import example from "@assets/example.png";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -38,7 +38,7 @@ function Carousel() {
 
   return (
     <div
-      className="embla relative justify-center flex flex-col overflow-hidden py-5"
+      className="embla relative justify-center flex flex-col overflow-hidden"
       ref={emblaRef}
     >
       <div className="flex">
@@ -46,7 +46,7 @@ function Carousel() {
           <div className={"min-w-[90%] p-3"} key={index}>
             <Slide
               tags={["tag1", "tag2", "tag3"]}
-              image={softwareEngineering}
+              image={example}
               imgFigcaption="Software development model"
               title="titulo 1"
               results={["bola", "bolinha", "cavalo"]}

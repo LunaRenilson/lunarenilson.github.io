@@ -59,10 +59,9 @@ export default function Home() {
         </div>
       </section>
 
-        <hr className="border-white relative"/>
-      <section className="mt-10">
+      <section className="mt-10 bg-white">
         <article className="featured-projects flex flex-col items-center justify-center w-full mx-auto">
-          <h2 className="font-bold text-4xl text-white">FEATURED PROJECTS</h2>
+          <h2 className="font-bold text-4xl mt-5">FEATURED PROJECTS</h2>
           <div className="w-full mx-auto shadow-md p-4">
             <Carousel />
           </div> 

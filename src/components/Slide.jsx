@@ -12,7 +12,7 @@ const Slide = ({
   onViewMore,
 }) => {
 return (
-     <div className="slide-container flex items-center justify-center p-4 gap-10 h-full w-full bg-gray-100 shadow-2xl rounded-2xl">
+     <div className="slide-container flex items-center justify-center p-4 gap-10 h-full w-full bg-gray-100 shadow-2xl rounded-2xl py-10">
           <section className="project-image flex flex-col gap-y-3">
                {tags && (
                     <ul className="tags-list flex flex-wrap gap-2 mt-2">
