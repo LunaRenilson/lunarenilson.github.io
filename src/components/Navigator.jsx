@@ -4,12 +4,28 @@ import { FaRegFolder } from "react-icons/fa";
 import { GrHomeRounded } from "react-icons/gr";
 import perfil from "@assets/perfil.jpeg";
 import logoUnicamp from "@assets/logoUnicamp.png";
+import { useEffect, useState } from "react";
 
 function Navigator() {
   const iconSize = 30;
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10); //
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [window.scrollY]);
+
   return (
-    <nav className="navigator gap-7 items-center p-3">
+    <nav
+      className={`navigator gap-7 items-center p-3 bg-white shadow-md duration-300 left-0 top-0 fixed w-full ${
+        isScrolled ? "opacity-95 h-18" : "h-25"
+      } z-5`}
+    >
       <div className="Icons flex gap-7 items-center font-bold w-fit">
         <img
           src={perfil}
@@ -54,14 +70,18 @@ function Navigator() {
         </Link>
       </div>
 
-      <hr className="h-0 w-1/3 border-gray-400 mt-3 bg-gray-300" />
-
       <div className="formation w-fit absolute right-0 top-2 flex items-center gap-4">
-        <div className="text-right">
+        <div className={`text-right ${!isScrolled ? "translate-0" : "translate-x-15 -translate-y-3"} duration-400`}>
           <p className="font-bold text-2xl">Renilson Luna</p>
           <p className="text-sm text-gray-600">Computer Engineering </p>
         </div>
-        <img src={logoUnicamp} alt="Logo da unicamp" width="75" className="" />
+          <img
+            src={logoUnicamp}
+            alt="Logo da unicamp"
+            width="75"
+            className={`${!isScrolled ? "opacity-100" : "opacity-0 scale-0"} duration-400`}
+          />
+
       </div>
     </nav>
   );

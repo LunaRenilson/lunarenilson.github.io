@@ -13,7 +13,7 @@ import Footer from "@components/Footer.jsx";
 const RootLayout = () => (
   <div className="min-h-screen flex flex-col">
     <Navigator />
-    <main className="flex-grow">
+    <main className="flex-grow mt-25">
       <Outlet />
     </main>
     <Footer />

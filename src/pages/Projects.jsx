@@ -31,8 +31,8 @@ export default function Projects() {
         </ul>
       </section>
 
-      <section className=" pl-10 mt-10 mb-10 bg-gray-100">
-        <div className="flex gap-10 flex-wrap justify-start mt-20">
+      <section className=" pl-10 mb-10 bg-gray-100">
+        <div className="flex gap-10 flex-wrap justify-start mt-10">
           {projects.map((project, idx) => (
               <CardProject key={idx} project={project} />
           ))}
