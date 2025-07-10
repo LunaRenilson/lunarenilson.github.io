@@ -1,11 +1,12 @@
 import Slide from "./Slide";
-import example from "@assets/example.png";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
+import featuredProjects from "@data/featuredProjects.json";
+
 
 function Carousel() {
   const autoplay = Autoplay({
@@ -36,23 +37,29 @@ function Carousel() {
     onSelect();
   }, [embla]);
 
+  const images = import.meta.glob('@assets/*', { eager: true, import: 'default' });
+
+function getFeaturedImage(img) {
+  return images[`/src/assets/${img}`] || null;
+}
+
   return (
     <div
       className="embla relative justify-center flex flex-col overflow-hidden"
       ref={emblaRef}
     >
       <div className="flex">
-        {Array.from({ length: 4 }).map((_, index) => (
+        {featuredProjects.map((project, index) => (
           <div className={"min-w-[90%] p-3"} key={index}>
             <Slide
-              tags={["tag1", "tag2", "tag3"]}
-              image={example}
-              imgFigcaption="Software development model"
-              title="titulo 1"
-              results={["bola", "bolinha", "cavalo"]}
-              tools={["python", "c", "java"]}
-              onViewMore="Ver mais"
-              summary="This slide presents a software engineering project, highlighting key tags, results, and tools used. Explore the development process and outcomes achieved with modern technologies."
+              tags={project.tags}
+              image={getFeaturedImage(project.image)}
+              imgFigcaption={project.imgFigcaption || "Project Image"}
+              title={project.title || "Project Title"}
+              results={project.results || ["Result 1", "Result 2"]}
+              tools={project.tools || ["Tool 1", "Tool 2"]}
+              viewMoreId={project.viewMoreId}
+              summary={project.summary || "Project summary goes here."}
             />
           </div>
         ))}

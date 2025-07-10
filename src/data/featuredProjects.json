@@ -1,0 +1,32 @@
+[
+     {
+          "tags": ["tag1", "tag2", "tag3"],
+          "image": "example.png",
+          "imgFigcaption": "Software image",
+          "title": "titulo 1",
+          "results": ["bola", "Quadrado"],
+          "tools": ["python", "c", "java"],
+          "viewMoreId": 2,
+          "summary": "This slide presents a software engineering project, highlighting key tags, results, and tools used. Explore the development process and outcomes achieved with modern technologies."
+     },
+     {
+          "tags": ["tag4", "tag5"],
+          "image": "brainstorm.png",
+          "imgFigcaption": "Brain image",
+          "title": "Brain",
+          "results": ["Reasoning", "Thoughts"],
+          "tools": ["python", "Layers", "Neuron"],
+          "viewMoreId": 2,
+          "summary": "This slide presents a software engineering project, highlighting key tags, results, and tools used. Explore the development process and outcomes achieved with modern technologies."
+     },
+     {
+          "tags": ["tag6", "tag8", "tag9"],
+          "image": "logoUnicamp.png",
+          "imgFigcaption": "Unicamp Logo",
+          "title": "Unicamp passthrough",
+          "results": ["Projects featured", "Academic formation"],
+          "tools": ["python", "Software Engineering", "Unicamp"],
+          "viewMoreId": 2,
+          "summary": "This slide presents a software engineering project, highlighting key tags, results, and tools used. Explore the development process and outcomes achieved with modern technologies."
+     }
+]
