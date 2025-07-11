@@ -3,11 +3,13 @@ import softwareEngineering from "@assets/software-engineering.png";
 import brainstorm from "@assets/brainstorm.png";
 import Carousel from "@components/Carousel";
 import Footer from "../components/Footer";
+import { BiRightArrow } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const iconSize = 35;
   return (
-    <div className="w-full bg-gray-900">
+    <div className="w-full bg-gray-800">
       <section className="Introducing relative flex flex-col items-center justify-center p-8 ">
         <article className="w-2/3 text-white mt-5 relative justify-center flex flex-col items-center">
           <h1 className="font-bold text-3xl mb-3 text-lef w-full">
@@ -60,10 +62,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-10 bg-white">
+      <section className="mt-10 w-4/5 mx-auto">
         <article className="featured-projects flex flex-col items-center justify-center w-full mx-auto">
-          <h2 className="font-bold text-4xl mt-5">FEATURED PROJECTS</h2>
-          <div className="w-full mx-auto shadow-md p-4">
+          <div className="flex items-baseline gap-2">
+          <h2 className="font-bold text-white text-4xl mt-5">FEATURED PROJECTS</h2>
+          <Link to="/projects" >
+           <small className="flex items-center text-xl text-blue-300">(and more <BiRightArrow size={15}/>)</small>
+          </Link>
+          </div>
+          <div className="w-full mx-auto p-4">
             <Carousel />
           </div>
         </article>

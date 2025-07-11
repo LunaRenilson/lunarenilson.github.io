@@ -13,7 +13,7 @@ const Slide = ({
   viewMoreId,
 }) => {
   return (
-    <div className="slide-container flex items-center justify-center p-4 gap-10 h-full w-full text-white bg-slate-900 border-1 border-gray-300 shadow-2xl rounded-2xl py-10">
+    <div className="slide-container flex items-center justify-center p-4 gap-10 h-full w-full bg-gray-100 border-1 border-gray-300 shadow-2xl rounded-2xl py-10">
       <section className="project-image flex flex-col gap-y-3">
 
         <figure className="rounded-2xl h-full p-4 shadow-sm">

@@ -10,7 +10,7 @@ const Contact = () => (
                </li>
                <li>
                     <FaPhone className="inline mr-2" />
-                    <strong>Tel:</strong> (19) 99719-3032
+                    <strong>Tel:</strong> +55 19 99719-3032
                </li>
                <li>
                     <FaLinkedin className="inline mr-2" color="blue"/>

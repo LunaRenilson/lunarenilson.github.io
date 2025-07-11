@@ -47,7 +47,7 @@ function Carousel() {
 
   return (
     <div
-      className="embla w-full relative justify-center items-center flex flex-col overflow-hidden"
+      className="embla w-full relative justify-center items-center flex flex-col overflow-hidden bg-gradient-to-b from-transparent py-2 to-gray-700 border-gray-500 border rounded-4xl shadow-gray-600 shadow-2xl"
       ref={emblaRef}
     >
       <div className="flex w-10/12">
@@ -67,11 +67,11 @@ function Carousel() {
         ))}
       </div>
 
-      <div className="embla__buttons relative flex justify-center mt-4">
-        <div className="p-5 gap-15 bg-white rounded-full flex">
+      <div className="embla__buttons relative flex justify-center mt-4 ">
+        <div className="p-5 gap-15 rounded-full flex">
           <button
             onClick={() => embla && embla.scrollPrev()}
-            className="border-1 p-3 flex items-center hover:gap-2 duration-200 gap-1 rounded-full hover:cursor-pointer hover:opacity-100 bg-blue-600 text-white font-bold opacity-70"
+            className="border-1 p-3 flex items-center hover:gap-2 duration-200 w-1/3 gap-1 rounded-full hover:cursor-pointer hover:opacity-100 hover:bg-blue-800 bg-blue-600 text-white font-bold opacity-70"
           >
             <FaArrowRight className="rotate-180" />
             Previous
@@ -81,7 +81,7 @@ function Carousel() {
             {Array.from({ length: slideCount }).map((_, index) => (
               <button
                 key={index}
-                className={`w-3 h-3 rounded-sm transition-all ${
+                className={`w-3 h-3 rounded-md transition-all ${
                   index === selectedIndex
                     ? "bg-blue-500 scale-125"
                     : "bg-gray-600"
