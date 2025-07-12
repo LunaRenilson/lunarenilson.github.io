@@ -1,7 +1,10 @@
 [
-  { "id": 1, "tag": "Machine Learning" },
-  { "id": 2, "tag": "NLP" },
-  { "id": 3, "tag": "LLM" },
-  { "id": 4, "tag": "Academic" },
-  { "id": 5, "tag": "Classification" }
+  "Machine Learning",
+  "NLP",
+  "LLM",
+  "Academic",
+  "Classification",
+  "Object Detection",
+  "Image Processing",
+  "Computer Vision"
 ]

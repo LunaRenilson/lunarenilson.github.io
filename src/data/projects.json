@@ -1,11 +1,11 @@
 [
      {
           "id": "1",
-          "title": "Website Portfolio",
-          "summary": "A personal portfolio website to showcase projects and skills.",
-          "tags": [15, 16, 18],
+          "title": "Classification of Academic Papers Using LLM",
+          "summary": "A multiclass classification using SVM, MLP (Multilayer Perceptron) and LLM",
+          "tags": ["Machine Learning", "NLP", "LLM", "Academic", "Classification"],
           "images": [
-               "default.png",
+               "confusion_matrix.png",
                "default.png"
           ],
           "results": [
@@ -23,87 +23,24 @@
      },
      {
           "id": "2",
-          "title": "E-commerce Store",
-          "summary": "An online store for electronics with shopping cart and payment integration.",
-          "tags": [28, 26, 11],
+          "title": "Detection and Automated Counting of Yields in Images",
+          "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade",
+          "tags": ["Object Detection", "Image Processing", "Computer Vision", "Academic"],
           "images": [
-               "default.png",
+               "confusion_matrix.png",
                "default.png"
           ],
           "results": [
-               "Launched MVP in 2 months",
-               "Processed 500+ orders",
-               "Integrated secure payments"
+               "Increased online presence",
+               "Showcased 10+ projects",
+               "Improved job opportunities"
           ],
           "tools": [
-               "Node.js",
-               "Express",
-               "MongoDB",
-               "Stripe"
+               "React",
+               "JavaScript",
+               "CSS",
+               "Netlify"
           ],
-          "description": "Developed a full-stack e-commerce application with product catalog, user authentication, shopping cart, and payment processing. Focused on performance and security best practices."
-     },
-     {
-          "id": "3",
-          "title": "Mobile Fitness App",
-          "summary": "A cross-platform mobile app for tracking workouts and progress.",
-          "tags": [64, 55, 72],
-          "images": [
-               "default.png",
-               "default.png"
-          ],
-          "results": [
-               "1000+ downloads",
-               "Positive user feedback",
-               "Implemented push notifications"
-          ],
-          "tools": [
-               "React Native",
-               "Firebase",
-               "Redux"
-          ],
-          "description": "Created a mobile app to help users track their fitness routines, set goals, and monitor progress. The app includes workout logging, analytics, and social sharing features."
-     },
-     {
-          "id": "4",
-          "title": "Mobile Fitness App",
-          "summary": "A cross-platform mobile app for tracking workouts and progress.",
-          "tags": [54, 38, 27],
-          "images": [
-               "default.png",
-               "default.png"
-          ],
-          "results": [
-               "1000+ downloads",
-               "Positive user feedback",
-               "Implemented push notifications"
-          ],
-          "tools": [
-               "React Native",
-               "Firebase",
-               "Redux"
-          ],
-          "description": "Created a mobile app to help users track their fitness routines, set goals, and monitor progress. The app includes workout logging, analytics, and social sharing features."
-     },
-     {
-          "id": "5",
-          "title": "Mobile Fitness App",
-          "summary": "A cross-platform mobile app for tracking workouts and progress.",
-          "tags": [3, 26, 43],
-          "images": [
-               "default.png",
-               "default.png"
-          ],
-          "results": [
-               "1000+ downloads",
-               "Positive user feedback",
-               "Implemented push notifications"
-          ],
-          "tools": [
-               "React Native",
-               "Firebase",
-               "Redux"
-          ],
-          "description": "Created a mobile app to help users track their fitness routines, set goals, and monitor progress. The app includes workout logging, analytics, and social sharing features."
+          "description": "This project involved designing and developing a responsive portfolio website using React. The site features a project gallery, contact form, and detailed information about my skills and experience."
      }
 ]

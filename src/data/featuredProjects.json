@@ -17,16 +17,6 @@
           "results": ["Detection of Overlapping Yields", "Counting with 5% absolute error"],
           "tools": ["python.png", "opencv.png", "matplotlib.png"],
           "viewMoreId": 2,
-          "summary": "This slide presents a software engineering project, highlighting key tags, results, and tools used. Explore the development process and outcomes achieved with modern technologies."
-     },
-     {
-          "title": "Unicamp passthrough",
-          "tags": ["tag6", "tag8", "tag9"],
-          "image": "logoUnicamp.png",
-          "imgFigcaption": "Unicamp Logo",
-          "results": ["Projects featured", "Academic formation"],
-          "tools": ["python", "Software Engineering", "Unicamp"],
-          "viewMoreId": 2,
-          "summary": "This slide presents a software engineering project, highlighting key tags, results, and tools used. Explore the development process and outcomes achieved with modern technologies."
+          "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade."
      }
 ]
