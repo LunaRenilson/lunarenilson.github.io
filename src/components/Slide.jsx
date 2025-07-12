@@ -12,17 +12,23 @@ const Slide = ({
   tools,
   viewMoreId,
 }) => {
+  const icons = import.meta.glob("@assets/icons/*", {
+    eager: true,
+    import: "default",
+  });
+
+  function getFeaturedIcon(icon) {
+    return icons[`/src/assets/icons/${icon}`] || null;
+  }
   return (
     <div className="slide-container flex items-center justify-center p-4 gap-10 h-full w-full bg-gray-100 border-1 border-gray-300 shadow-2xl rounded-2xl py-10">
       <section className="project-image flex flex-col gap-y-3">
-
         <figure className="rounded-2xl h-full p-4 shadow-sm">
           <img src={image} alt={title} width="500" className="rounded" />
           <figcaption className="text-center text-sm text-gray-100 mt-2">
             {imgFigcaption}
           </figcaption>
         </figure>
-
       </section>
 
       <section className="project-details flex flex-col gap-y-8 h-3/4 w-1/2">
@@ -54,9 +60,18 @@ const Slide = ({
           </div>
 
           <div className="tools-container h-full">
-            <h3 className="font-bold text-xl">Tools Used</h3>
-            <ul className="list-inside flex gap-3 text-[15px]">
-              {tools && tools.map((tool, idx) => <li key={idx}>{tool}</li>)}
+            <h3 className="font-bold text-xl mb-1">Tools Used</h3>
+            <ul className="list-inside grid-cols-4 grid text-[15px] rounded-md gap-2 items-center">
+              {tools &&
+                tools.map((tool, idx) => (
+                  <li key={idx} className="w-fit shadow-lg bg-white">
+                    <img
+                      src={getFeaturedIcon(tool)}
+                      alt={"image of " + tool}
+                      className="h-[60px] w-[60px] bg-white border-white border-1"
+                    />
+                  </li>
+                ))}
             </ul>
           </div>
         </div>

@@ -4,18 +4,18 @@
           "tags": ["Machine Learning", "NLP", "LLM", "Academic", "Classification"],
           "image": "confusion_matrix.png",
           "imgFigcaption": "Confusion Matrix LLaMA:8b",
-          "results": ["F1-Score of 94%", "Clear distinction between classes", "Comparison of Models"],
-          "tools": ["Python", "LLaMA 3", "SVM", "MLP", "TF-IDF"],
-          "viewMoreId": 2,
-          "summary": "This slide presents a software engineering project, highlighting key tags, results, and tools used. Explore the development process and outcomes achieved with modern technologies."
+          "results": ["F1-Score of 94% using LLaMA", "Clear distinction between classes", "Comparison of Models"],
+          "tools": ["python.png", "llama3.jpg", "seaborn.png", "matplotlib.png", "sklearn.png"],
+          "viewMoreId": 1,
+          "summary": "A multiclass classification of papers, comparing the performance of different SVM, MLP (Multilayer Perceptron) and LLM models and techniques."
      },
      {
-          "title": "Brain",
-          "tags": ["tag4", "tag5"],
-          "image": "brainstorm.png",
-          "imgFigcaption": "Brain image",
-          "results": ["Reasoning", "Thoughts"],
-          "tools": ["python", "Layers", "Neuron"],
+          "title": "Detection and Automated Counting of Yields in Images",
+          "tags": ["Object Detection", "Image Processing", "Computer Vision", "Academic"],
+          "image": "yields-counting.png",
+          "imgFigcaption": "Yields Detecteds in Petri and Blade images",
+          "results": ["Detection of Overlapping Yields", "Counting with 5% absolute error"],
+          "tools": ["python.png", "opencv.png", "matplotlib.png"],
           "viewMoreId": 2,
           "summary": "This slide presents a software engineering project, highlighting key tags, results, and tools used. Explore the development process and outcomes achieved with modern technologies."
      },

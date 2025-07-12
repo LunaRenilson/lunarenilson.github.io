@@ -36,13 +36,13 @@ function Carousel() {
     onSelect();
   }, [embla]);
   
-  const images = import.meta.glob("@assets/*", {
+  const images = import.meta.glob("@assets/project_images/*", {
     eager: true,
     import: "default",
   });
 
   function getFeaturedImage(img) {
-    return images[`/src/assets/${img}`] || null;
+    return images[`/src/assets/project_images/${img}`] || null;
   }
 
   return (
