@@ -1,6 +1,6 @@
 [
      {
-          "title": "Classificação de Artigos acadêmicos",
+          "title": "Classification of Academic Papers Using LLM",
           "tags": ["Machine Learning", "NLP", "LLM", "Academic", "Classification"],
           "image": "confusion_matrix.png",
           "imgFigcaption": "Confusion Matrix LLaMA:8b",
