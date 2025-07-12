@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-10 w-4/5 mx-auto">
+      <section className="mt-10 w-5/6 mx-auto">
         <article className="featured-projects flex flex-col items-center justify-center w-full mx-auto">
           <div className="flex items-baseline gap-2">
           <h2 className="font-bold text-white text-4xl mt-5">FEATURED PROJECTS</h2>
@@ -74,7 +74,7 @@ export default function Home() {
             <Carousel />
           </div>
         </article>
-      </section>
+      </section>  
     </div>
   );
 }

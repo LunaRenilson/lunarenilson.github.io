@@ -31,7 +31,7 @@ const Slide = ({
             {tags.map((tag, idx) => (
               <li
                 key={idx}
-                className="bg-red-200 text-red-800 px-2 py-1 rounded-full text-sm"
+                className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-sm"
               >
                 {tag}
               </li>
@@ -40,22 +40,22 @@ const Slide = ({
         )}
 
         <div className="title-container">
-          <h2 className="font-bold text-3xl">{title}</h2>
-          <p className="text-[16px]">{summary}</p>
+          <h2 className="font-bold text-xl mb-2">{title}</h2>
+          <p className="text-[15px]">{summary}</p>
         </div>
 
         <div className="details-container flex justify-between w-full ">
           <div>
-            <h3 className="font-bold text-3xl">Results</h3>
-            <ul className="list-disc list-inside text-[16px]">
+            <h3 className="font-bold text-xl">Results</h3>
+            <ul className="list-disc list-inside text-[15px]">
               {results &&
                 results.map((result, idx) => <li key={idx}>{result}</li>)}
             </ul>
           </div>
 
           <div className="tools-container h-full">
-            <h3 className="font-bold text-3xl">Tools Used</h3>
-            <ul className="list-inside flex gap-3 text-[16px]">
+            <h3 className="font-bold text-xl">Tools Used</h3>
+            <ul className="list-inside flex gap-3 text-[15px]">
               {tools && tools.map((tool, idx) => <li key={idx}>{tool}</li>)}
             </ul>
           </div>
