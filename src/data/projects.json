@@ -19,7 +19,7 @@
     "results": ["Detection of Overlapping Yeasts", "Counting with 5% absolute error"],
     "tools": ["python.png", "opencv.png", "matplotlib.png"],
     "viewMore": "https://doi.org/10.1093/jimb/kuae029",
-    "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade as part of academic research in Food Engineering."
+    "summary": "Algorithm to detect and count the amount of yeasts in picures of petri dish and blade as part of academic research in Food Engineering."
   },
   {
     "id": 3,

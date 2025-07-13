@@ -13,7 +13,7 @@ export default function Projects() {
     const filtered = projects.filter(project => {
       const filter = 
       project.title.toLowerCase().includes(search)
-      || project.description.toLowerCase().includes(search)
+      || project.summary.toLowerCase().includes(search)
       || project.tags.some(tag => tag.toLowerCase().includes(search))
 
       return filter
@@ -50,11 +50,11 @@ export default function Projects() {
       >
         <h1 className="text-4xl ml-10 font-bold mb-4">Projects</h1>
         <section className="ml-10 pb-5 w-1/2 flex flex-col border-b-1 border-gray-500">
-          <div className="flex gap-2 items-baseline mb-4">
-            <p className="mb-2">Search</p>
+          <div className="flex gap-4 items-baseline mb-4">
+            <p className="mb-2">Search Project</p>
             <input
               type="text"
-              className="border-1 h-7 border-gray-300 rounded-sm outline-none p-5"
+              className="border-1 h-7 border-gray-500 rounded-sm outline-none shadow-lg p-5"
               placeholder="Search tag, title or description"
               onChange={handleSearch}
             />
@@ -75,7 +75,7 @@ export default function Projects() {
         </section>
       </div>
       {selectedProject && (
-        <div className="w-full flex justify-center absolute top-1/4">
+        <div className="w-full flex justify-center absolute items-center top-1/4">
           <div className="w-fit">
             <button
               className="text-4xl z-10 top-0 bg-red-400 text-red-800 px-2 rounded-md mb-1 w-fit hover:cursor-pointer hover:bg-red-500"
@@ -83,10 +83,11 @@ export default function Projects() {
             >
               X
             </button>
+
             <Slide
               project={selectedProject}
               projectImage={image}
-              addStyle="bg-white p-10 rounded-lg shadow-2xl border-2 w-full flex bg-gray-300"
+              addStyle="bg-white p-10 rounded-lg shadow-2xl border-1 gap-5 xl:w-200 2xl:w-300 mx-auto flex bg-gray-300"
             />
           </div>
         </div>

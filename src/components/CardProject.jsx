@@ -11,7 +11,7 @@ const CardProject = ({ project, onClickEvent }) => {
     images[`@assets/default.png`];
 
   return (
-    <div className="border border-gray-200 rounded-lg w-1/5 flex-wrap shadow-md hover:shadow-2xl overflow-hidden bg-white flex flex-col">
+    <div className="border border-gray-200 rounded-lg w-70 flex-wrap shadow-md hover:shadow-2xl overflow-hidden bg-white flex flex-col">
       <div className="flex flex-col h-full">
         <div className="flex-grow items-center flex bg-black">
           <img
@@ -22,13 +22,13 @@ const CardProject = ({ project, onClickEvent }) => {
         </div>
         <div className="flex-grow flex flex-col justify-center">
           <div className="details p-4 flex-grow flex flex-col justify-center">
-            <h3 className="text-lg font-semibold mb-2 ">{project.title}</h3>
-            <p className="mb-3 text-gray-600">{project.summary}</p>
+            <h3 className="text-[14px] 2xl:text-lg font-semibold mb-2 ">{project.title}</h3>
+            <p className="mb-3 text-[12px] xl:text-md text-gray-600">{project.summary}</p>
             <ul className="inline-block text-gray-800 px-2 py-1 text-xs h-full border-b-1 border-gray-300">
               {project.tags.map((tag, idx) => (
                 <li
                   key={idx}
-                  className="inline-block mr-2 mb-1 bg-blue-200 text-blue-800 px-2 py-1 rounded-full"
+                  className="text-[10px] 2xl:text-sm  inline-block mr-2 mb-1 bg-blue-200 text-blue-800 px-2 py-1 rounded-full"
                 >
                   {tag}
                 </li>
@@ -38,13 +38,13 @@ const CardProject = ({ project, onClickEvent }) => {
 
           <div className="bottons mb-3 text-center font-bold flex w-full justify-around items-center bottom-0">
             <button
-              className="flex justify-center w-1/3 hover:cursor-pointer hover:text-emerald-700 border-b-1 border-transparent hover:border-emerald-200"
+              className="flex text-[14px] 2xl:text-md justify-center w-1/3 hover:cursor-pointer hover:text-emerald-700 border-b-1 border-transparent hover:border-emerald-200"
               onClick={onClickEvent}
             >
               Details
             </button>
 
-            <button className="flex justify-center w-1/3 hover:text-blue-600 border-b-1 border-transparent hover:border-blue-200">
+            <button className="flex text-[14px] 2xl:text-md justify-center w-1/3 hover:text-blue-600 border-b-1 border-transparent hover:border-blue-200">
               <a href={project.viewMore}>See project</a>
             </button>
           </div>

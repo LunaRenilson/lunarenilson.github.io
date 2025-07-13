@@ -7,6 +7,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import featuredProjects from "@data/featuredProjects.json";
 
+
 function Carousel() {
   const autoplay = Autoplay({
     delay: 5000,
@@ -52,27 +53,27 @@ function Carousel() {
     >
       <div className="flex w-10/12">
         {featuredProjects.map((project, index) => (
-          <div className={"min-w-[90%] p-3"} key={index}>
+          <div className="min-w-[80%] p-3" key={index}>
             <Slide
               project={project}
               projectImage={getFeaturedImage(project.image)}
-              addStyle={"slide-container flex items-center justify-center p-4 gap-10 h-full w-full bg-gray-100 border-1 border-gray-300 shadow-2xl rounded-2xl py-10"}
+              addStyle={"slide-container flex items-center justify-center p-4 gap-5 w-full h-full bg-gray-100 border-1 border-gray-300 shadow-2xl rounded-2xl py-10"}
             />
           </div>
         ))}
       </div>
 
-      <div className="embla__buttons relative flex justify-center mt-4 ">
+      <div className="embla__buttons absolute flex justify-center mt-4 w-full h-full">
         <div className="p-5 gap-15 rounded-full flex">
           <button
             onClick={() => embla && embla.scrollPrev()}
-            className="border-1 p-3 flex items-center hover:gap-2 duration-200 w-1/3 gap-1 rounded-full hover:cursor-pointer hover:opacity-100 hover:bg-blue-800 bg-blue-600 text-white font-bold opacity-70"
+            className="absolute h-1/3 top-1/3 left-0 p-3 flex items-center hover:gap-2 duration-200 gap-1 w-fit 
+             bg-blue-600 opacity-30 hover:opacity-100 hover:cursor-pointer"
           >
-            <FaArrowRight className="rotate-180" />
-            Previous
+            <FaArrowRight className="rotate-180" color="white"/>
           </button>
 
-          <div className="flex justify-center gap-2 mt-4">
+          <div className="flex justify-center gap-2 mt-4 absolute bottom-3">
             {Array.from({ length: slideCount }).map((_, index) => (
               <button
                 key={index}
@@ -87,9 +88,10 @@ function Carousel() {
 
           <button
             onClick={() => embla && embla.scrollNext()}
-            className="border-1 p-3 flex items-center hover:gap-2 gap-1 duration-200 rounded-full hover:opacity-100 bg-blue-600 hover:bg-blue-800 hover:cursor-pointer text-white font-bold opacity-70"
+            className="absolute h-1/3 top-1/3 right-0 p-3 flex items-center hover:gap-2 duration-200 gap-1 w-fit 
+             bg-blue-600 opacity-30 hover:opacity-100 hover:cursor-pointer"
           >
-            Next <FaArrowRight />
+            <FaArrowRight color="white"/>
           </button>
         </div>
       </div>
