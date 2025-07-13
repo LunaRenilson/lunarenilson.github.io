@@ -11,8 +11,8 @@ const CardProject = ({ project, onClickEvent }) => {
     images[`@assets/default.png`];
 
   return (
-    <div className="border border-gray-200 rounded-lg w-1/5 flex-wrap shadow-md hover:shadow-2xl hover:border-blue-600 active:scale-95 overflow-hidden bg-white flex flex-col">
-      <div className="flex flex-col h-full hover:cursor-pointer" onClick={onClickEvent}>
+    <div className="border border-gray-200 rounded-lg w-1/5 flex-wrap shadow-md hover:shadow-2xl overflow-hidden bg-white flex flex-col">
+      <div className="flex flex-col h-full">
         <div className="flex-grow items-center flex bg-black">
           <img
             src={image}
@@ -20,19 +20,34 @@ const CardProject = ({ project, onClickEvent }) => {
             className="w-full bg-cover object-cover bg-no-repeat pointer-events-none"
           />
         </div>
-        <div className="p-4 flex-grow flex flex-col justify-center">
-          <h3 className="text-lg font-semibold mb-2 ">{project.title}</h3>
-          <p className="mb-3 text-gray-600">{project.summary}</p>
-          <ul className="inline-block text-gray-800 rounded px-2 py-1 text-xs h-full">
-            {project.tags.map((tag, idx) => (
-              <li
-                key={idx}
-                className="inline-block mr-2 mb-1 bg-blue-200 text-blue-800 px-2 py-1 rounded-full"
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
+        <div className="flex-grow flex flex-col justify-center">
+          <div className="details p-4 flex-grow flex flex-col justify-center">
+            <h3 className="text-lg font-semibold mb-2 ">{project.title}</h3>
+            <p className="mb-3 text-gray-600">{project.summary}</p>
+            <ul className="inline-block text-gray-800 px-2 py-1 text-xs h-full border-b-1 border-gray-300">
+              {project.tags.map((tag, idx) => (
+                <li
+                  key={idx}
+                  className="inline-block mr-2 mb-1 bg-blue-200 text-blue-800 px-2 py-1 rounded-full"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bottons mb-3 text-center font-bold flex w-full justify-around items-center bottom-0">
+            <button
+              className="flex justify-center w-1/3 hover:cursor-pointer hover:text-emerald-700 border-b-1 border-transparent hover:border-emerald-200"
+              onClick={onClickEvent}
+            >
+              Details
+            </button>
+
+            <button className="flex justify-center w-1/3 hover:text-blue-600 border-b-1 border-transparent hover:border-blue-200">
+              <a href={project.viewMore}>See project</a>
+            </button>
+          </div>
         </div>
       </div>
     </div>

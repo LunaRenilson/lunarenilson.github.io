@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,12 @@ const Slide = ({ project, projectImage, addStyle }) => {
     <div className={addStyle}>
       <section className="project-image flex flex-col gap-y-3">
         <figure className="rounded-2xl h-full p-4 shadow-sm">
-          <img src={projectImage} alt={project.title} width="500" className="rounded" />
+          <img
+            src={projectImage}
+            alt={project.title}
+            width="500"
+            className="rounded"
+          />
           <figcaption className="text-center text-gray-700 text-sm mt-2">
             {project.imgFigcaption}
           </figcaption>
@@ -47,7 +52,9 @@ const Slide = ({ project, projectImage, addStyle }) => {
             <h3 className="font-bold text-xl">Results</h3>
             <ul className="list-disc list-inside text-[15px]">
               {project.results &&
-                project.results.map((result, idx) => <li key={idx}>{result}</li>)}
+                project.results.map((result, idx) => (
+                  <li key={idx}>{result}</li>
+                ))}
             </ul>
           </div>
 
@@ -68,12 +75,12 @@ const Slide = ({ project, projectImage, addStyle }) => {
           </div>
         </div>
 
-        <Link to={project.viewMore} className=" w-fit">
-          <button className="left-0 my-5 flex items-center hover:cursor-pointer gap-2 text-[16px] border-b-1 border-gray-600 w-fit hover:text-blue-500">
+        <button className="">
+          <Link to={project.viewMore} className="left-0 my-5 flex items-center hover:cursor-pointer gap-2 text-[16px] border-b-1 border-gray-600 w-fit hover:text-blue-500">
             Acess Project
             <FaArrowRight className="" />
-          </button>
-        </Link>
+          </Link>
+        </button>
       </section>
     </div>
   );

@@ -1,59 +1,96 @@
-import { useState } from "react";
-import projectTags from "@data/tagsProject.json";
+import { useEffect, useState } from "react";
+// import projectTags from "@data/tagsProject.json";
 import projects from "@data/projects.json";
 import CardProject from "@components/CardProject.jsx";
 import Slide from "../components/Slide";
 
 export default function Projects() {
-  const [tags, setTags] = useState(projectTags.slice(0, 15));
   const [selectedProject, setSelectedProject] = useState(null);
+  const [filteredProjects, setFilteredProjects] = useState(null)
 
+  const handleSearch = e => {
+    const search = e.target.value.toLowerCase();
+    const filtered = projects.filter(project => {
+      const filter = 
+      project.title.toLowerCase().includes(search)
+      || project.description.toLowerCase().includes(search)
+      || project.tags.some(tag => tag.toLowerCase().includes(search))
+
+      return filter
+    });
+    setFilteredProjects(filtered)
+  }
+
+  const images = import.meta.glob("@assets/project_images/*", {
+    eager: true,
+    import: "default",
+  });
+
+  const image = selectedProject
+    ? images[`/src/assets/project_images/${selectedProject.image}`]
+    : "";
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setSelectedProject(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
   return (
-    <div className="flex flex-col mt-10 justify-center">
-      <h1 className="text-4xl ml-10 font-bold mb-4">Projects</h1>
-      <section className="ml-10 pb-5 w-1/2 flex flex-col border-b-1 border-gray-500">
-        <div className="flex gap-2 items-baseline mb-4">
-          <p className="mb-2">Search</p>
-          <input
-            type="text"
-            className="border-1 h-7 border-gray-300 rounded-sm outline-none p-5"
-            placeholder="Search tag, title or description"
-          />
-        </div>
-
-        <ul className="flex flex-wrap gap-2 justify-start">
-          {tags.map((tag, idx) => (
-            <li
-              key={idx}
-              className="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-md"
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className=" pl-10  bg-gray-300 pb-5 w-full">
-        {selectedProject && (
-          <div className="w-full flex justify-">
-            <Slide
-              project={selectedProject}
-              addStyle="absolute bg-white p-10 rounded-lg shadow-2xl w-5/6 flex "
+    <div>
+      <div
+        className={`flex flex-col mt-10 justify-center ${
+          selectedProject ? "blur-md" : ""
+        }`}
+        onClick={() => (selectedProject ? setSelectedProject(null) : "")}
+      >
+        <h1 className="text-4xl ml-10 font-bold mb-4">Projects</h1>
+        <section className="ml-10 pb-5 w-1/2 flex flex-col border-b-1 border-gray-500">
+          <div className="flex gap-2 items-baseline mb-4">
+            <p className="mb-2">Search</p>
+            <input
+              type="text"
+              className="border-1 h-7 border-gray-300 rounded-sm outline-none p-5"
+              placeholder="Search tag, title or description"
+              onChange={handleSearch}
             />
           </div>
-        )}
+        </section>
 
-        <div className="flex gap-10 flex-wrap justify-start mt-10">
-          {projects.map((project, idx) => (
-            <CardProject
-              key={idx}
-              project={project}
-              projectImage={project.image}
-              onClickEvent={() => setSelectedProject(project)}
+        <section className=" pl-10  bg-gray-300 pb-5 w-full">
+          <div className="flex gap-10 flex-wrap justify-start mt-10">
+            {(filteredProjects ?? projects).map((project, idx) => (
+              <CardProject
+                key={idx}
+                project={project}
+                projectImage={image}
+                onClickEvent={() => setSelectedProject(project)}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+      {selectedProject && (
+        <div className="w-full flex justify-center absolute top-1/4">
+          <div className="w-fit">
+            <button
+              className="text-4xl z-10 top-0 bg-red-400 text-red-800 px-2 rounded-md mb-1 w-fit hover:cursor-pointer hover:bg-red-500"
+              onClick={() => setSelectedProject(null)}
+            >
+              X
+            </button>
+            <Slide
+              project={selectedProject}
+              projectImage={image}
+              addStyle="bg-white p-10 rounded-lg shadow-2xl border-2 w-full flex bg-gray-300"
             />
-          ))}
+          </div>
         </div>
-      </section>
+      )}
     </div>
   );
 }
