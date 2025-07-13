@@ -54,14 +54,9 @@ function Carousel() {
         {featuredProjects.map((project, index) => (
           <div className={"min-w-[90%] p-3"} key={index}>
             <Slide
-              tags={project.tags}
-              image={getFeaturedImage(project.image)}
-              imgFigcaption={project.imgFigcaption || "Project Image"}
-              title={project.title || "Project Title"}
-              results={project.results || ["Result 1", "Result 2"]}
-              tools={project.tools || ["Tool 1", "Tool 2"]}
-              viewMoreId={project.viewMoreId}
-              summary={project.summary || "Project summary goes here."}
+              project={project}
+              projectImage={getFeaturedImage(project.image)}
+              addStyle={"slide-container flex items-center justify-center p-4 gap-10 h-full w-full bg-gray-100 border-1 border-gray-300 shadow-2xl rounded-2xl py-10"}
             />
           </div>
         ))}

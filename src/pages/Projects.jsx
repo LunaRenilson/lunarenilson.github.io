@@ -2,9 +2,11 @@ import { useState } from "react";
 import projectTags from "@data/tagsProject.json";
 import projects from "@data/projects.json";
 import CardProject from "@components/CardProject.jsx";
+import Slide from "../components/Slide";
 
 export default function Projects() {
   const [tags, setTags] = useState(projectTags.slice(0, 15));
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <div className="flex flex-col mt-10 justify-center">
@@ -31,10 +33,24 @@ export default function Projects() {
         </ul>
       </section>
 
-      <section className=" pl-10  bg-gray-300 pb-5">
+      <section className=" pl-10  bg-gray-300 pb-5 w-full">
+        {selectedProject && (
+          <div className="w-full flex justify-">
+            <Slide
+              project={selectedProject}
+              addStyle="absolute bg-white p-10 rounded-lg shadow-2xl w-5/6 flex "
+            />
+          </div>
+        )}
+
         <div className="flex gap-10 flex-wrap justify-start mt-10">
           {projects.map((project, idx) => (
-              <CardProject key={idx} project={project} />
+            <CardProject
+              key={idx}
+              project={project}
+              projectImage={project.image}
+              onClickEvent={() => setSelectedProject(project)}
+            />
           ))}
         </div>
       </section>

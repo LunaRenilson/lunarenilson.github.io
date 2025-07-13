@@ -1,46 +1,35 @@
 [
-     {
-          "id": "1",
-          "title": "Classification of Academic Papers Using LLM",
-          "summary": "A multiclass classification using SVM, MLP (Multilayer Perceptron) and LLM",
-          "tags": ["Machine Learning", "NLP", "LLM", "Academic", "Classification"],
-          "images": [
-               "confusion_matrix.png",
-               "default.png"
-          ],
-          "results": [
-               "Increased online presence",
-               "Showcased 10+ projects",
-               "Improved job opportunities"
-          ],
-          "tools": [
-               "React",
-               "JavaScript",
-               "CSS",
-               "Netlify"
-          ],
-          "description": "This project involved designing and developing a responsive portfolio website using React. The site features a project gallery, contact form, and detailed information about my skills and experience."
-     },
-     {
-          "id": "2",
-          "title": "Detection and Automated Counting of Yields in Images",
-          "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade",
-          "tags": ["Object Detection", "Image Processing", "Computer Vision", "Academic"],
-          "images": [
-               "confusion_matrix.png",
-               "default.png"
-          ],
-          "results": [
-               "Increased online presence",
-               "Showcased 10+ projects",
-               "Improved job opportunities"
-          ],
-          "tools": [
-               "React",
-               "JavaScript",
-               "CSS",
-               "Netlify"
-          ],
-          "description": "This project involved designing and developing a responsive portfolio website using React. The site features a project gallery, contact form, and detailed information about my skills and experience."
-     }
+  {
+    "id": 1,
+    "title": "Classification of Academic Papers Using LLM",
+    "tags": ["Machine Learning", "NLP", "LLM", "Academic", "Classification"],
+    "image": "confusion_matrix.png",
+    "imgFigcaption": "Confusion Matrix LLaMA:8b",
+    "results": ["F1-Score of 94% using LLaMA", "Clear distinction between classes", "Comparison of Models"],
+    "tools": ["python.png", "llama3.jpg", "seaborn.png", "matplotlib.png", "sklearn.png"],
+    "viewMore": "https://github.com/LunaRenilson/Scientific-Text-Classification",
+    "summary": "A multiclass classification of papers, comparing the performance of different SVM, MLP (Multilayer Perceptron) and LLM models and techniques."
+  },
+  {
+    "id": 2,
+    "title": "Detection and Automated Counting of Yeasts in Images",
+    "tags": ["Object Detection", "Image Processing", "Computer Vision", "Academic"],
+    "image": "Yeasts-counting.png",
+    "imgFigcaption": "Yeasts Detecteds in Petri and Blade images",
+    "results": ["Detection of Overlapping Yeasts", "Counting with 5% absolute error"],
+    "tools": ["python.png", "opencv.png", "matplotlib.png"],
+    "viewMore": "https://doi.org/10.1093/jimb/kuae029",
+    "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade as part of academic research in Food Engineering."
+  },
+  {
+    "id": 3,
+    "title": "Website Portfolio",
+    "tags": ["Web Development", "ReactJs", "Javascript", "HTML/CSS", "UI/UX"],
+    "image": "Arthur-portfolio.png",
+    "imgFigcaption": "Portfolio Homepage",
+    "results": ["About me, works and research pages", "Color palette kept in whole website"],
+    "tools": ["reactjs.png", "vitejs.png", "gh-pages.jpg"],
+    "viewMore": "https://www.github.com/arthur-amorim/portfolio",
+    "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade."
+  }
 ]
