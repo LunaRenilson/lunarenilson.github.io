@@ -31,5 +31,16 @@
     "tools": ["reactjs.png", "vitejs.png", "gh-pages.jpg"],
     "viewMore": "https://www.github.com/arthur-amorim/portfolio",
     "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade."
+  },
+  {
+    "id": 4,
+    "title": "Cryptocoin Consultor",
+    "tags": ["Web Development", "ReactJs", "Javascript", "HTML/CSS", "UI/UX", "cryptocoin"],
+    "image": "cryptocoin-consultor.png",
+    "imgFigcaption": "Crypto Consultor",
+    "results": ["API Consumed correctly", "Graphs Ganaratared", "Cryptocoins Listed"],
+    "tools": ["reactjs.png", "vitejs.png"],
+    "viewMore": "https://github.com/LunaRenilson/cryptoConsult",
+    "summary": "Application to consult cryptocoins and it's graph of values throughout the time."
   }
 ]
