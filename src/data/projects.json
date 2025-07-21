@@ -5,18 +5,36 @@
     "tags": ["Machine Learning", "NLP", "LLM", "Academic", "Classification"],
     "image": "confusion_matrix.png",
     "imgFigcaption": "Confusion Matrix LLaMA:8b",
-    "results": ["F1-Score of 94% using LLaMA", "Clear distinction between classes", "Comparison of Models"],
-    "tools": ["python.png", "llama3.jpg", "seaborn.png", "matplotlib.png", "sklearn.png"],
+    "results": [
+      "F1-Score of 94% using LLaMA",
+      "Clear distinction between classes",
+      "Comparison of Models"
+    ],
+    "tools": [
+      "python.png",
+      "llama3.jpg",
+      "seaborn.png",
+      "matplotlib.png",
+      "sklearn.png"
+    ],
     "viewMore": "https://github.com/LunaRenilson/Scientific-Text-Classification",
     "summary": "A multiclass classification of papers, comparing the performance of different SVM, MLP (Multilayer Perceptron) and LLM models and techniques."
   },
   {
     "id": 2,
     "title": "Detection and Automated Counting of Yeasts in Images",
-    "tags": ["Object Detection", "Image Processing", "Computer Vision", "Academic"],
+    "tags": [
+      "Object Detection",
+      "Image Processing",
+      "Computer Vision",
+      "Academic"
+    ],
     "image": "Yeasts-counting.png",
     "imgFigcaption": "Yeasts Detecteds in Petri and Blade images",
-    "results": ["Detection of Overlapping Yeasts", "Counting with 5% absolute error"],
+    "results": [
+      "Detection of Overlapping Yeasts",
+      "Counting with 5% absolute error"
+    ],
     "tools": ["python.png", "opencv.png", "matplotlib.png"],
     "viewMore": "https://doi.org/10.1093/jimb/kuae029",
     "summary": "Algorithm to detect and count the amount of yeasts in picures of petri dish and blade as part of academic research in Food Engineering."
@@ -27,7 +45,10 @@
     "tags": ["Web Development", "ReactJs", "Javascript", "HTML/CSS", "UI/UX"],
     "image": "Arthur-portfolio.png",
     "imgFigcaption": "Portfolio Homepage",
-    "results": ["About me, works and research pages", "Color palette kept in whole website"],
+    "results": [
+      "About me, works and research pages",
+      "Color palette kept in whole website"
+    ],
     "tools": ["reactjs.png", "vitejs.png", "gh-pages.jpg"],
     "viewMore": "https://www.github.com/arthur-amorim/portfolio",
     "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade."
@@ -35,12 +56,54 @@
   {
     "id": 4,
     "title": "Cryptocoin Consultor",
-    "tags": ["Web Development", "ReactJs", "Javascript", "HTML/CSS", "UI/UX", "cryptocoin"],
+    "tags": [
+      "Web Development",
+      "ReactJs",
+      "Javascript",
+      "HTML/CSS",
+      "UI/UX",
+      "Cryptocoin"
+    ],
     "image": "cryptocoin-consultor.png",
     "imgFigcaption": "Crypto Consultor",
-    "results": ["API Consumed correctly", "Graphs Ganaratared", "Cryptocoins Listed"],
+    "results": [
+      "API Consumed correctly",
+      "Graphs Ganaratared",
+      "Cryptocoins Listed"
+    ],
     "tools": ["reactjs.png", "vitejs.png"],
     "viewMore": "https://github.com/LunaRenilson/cryptoConsult",
     "summary": "Application to consult cryptocoins and it's graph of values throughout the time."
+  },
+  {
+    "id": 5,
+    "title": "Dapp Vote System",
+    "tags": [
+      "Web Development",
+      "Blockchain",
+      "ReactJs",
+      "Javascript",
+      "HTML/CSS",
+      "UI/UX",
+      "Cryptocoin",
+      "Ethereum"
+    ],
+    "image": "voteSystem.png",
+    "imgFigcaption": "Crypto Consultor",
+    "results": [
+      "Functional SmartContract with vote validation",
+      "Frontend connected to local blockchain via MetaMask and hardhat",
+      "Candidate list dynamically rendered from the smart contract",
+      "Accounts Switched Successfully"
+    ],
+    "tools": [
+      "reactjs.png",
+      "vitejs.png",
+      "hardhat.png",
+      "solidty.jpeg",
+      "ethers.png"
+    ],
+    "viewMore": "https://github.com/LunaRenilson/voteSystem",
+    "summary": "Development of a decentralized voting application using smart contracts and Ethereum blockchain."
   }
 ]
