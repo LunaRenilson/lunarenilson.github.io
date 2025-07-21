@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 const CardProject = ({ project, onClickEvent }) => {
   const images = import.meta.glob("@assets/project_images/*", {

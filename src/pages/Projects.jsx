@@ -6,20 +6,20 @@ import Slide from "../components/Slide";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [filteredProjects, setFilteredProjects] = useState(null)
+  const [filteredProjects, setFilteredProjects] = useState(null);
 
-  const handleSearch = e => {
+  const handleSearch = (e) => {
     const search = e.target.value.toLowerCase();
-    const filtered = projects.filter(project => {
-      const filter = 
-      project.title.toLowerCase().includes(search)
-      || project.summary.toLowerCase().includes(search)
-      || project.tags.some(tag => tag.toLowerCase().includes(search))
+    const filtered = projects.filter((project) => {
+      const filter =
+        project.title.toLowerCase().includes(search) ||
+        project.summary.toLowerCase().includes(search) ||
+        project.tags.some((tag) => tag.toLowerCase().includes(search));
 
-      return filter
+      return filter;
     });
-    setFilteredProjects(filtered)
-  }
+    setFilteredProjects(filtered);
+  };
 
   const images = import.meta.glob("@assets/project_images/*", {
     eager: true,
@@ -61,24 +61,27 @@ export default function Projects() {
           </div>
         </section>
 
-        <section className=" pl-10  bg-gray-300 pb-5 w-full">
-          <div className="flex gap-10 flex-wrap justify-start mt-10">
+        <section className="bg-gray-300 pb-5 w-full flex items-center justify-center">
+          <div className="flex flex-wrap gap-5 gap-10 flex-wrap justify-start w-full max-w-11/12 mt-10 ">
             {(filteredProjects ?? projects).map((project, idx) => (
               <CardProject
                 key={idx}
                 project={project}
                 projectImage={image}
-                onClickEvent={() => setSelectedProject(project)}
+                onClickEvent={() => {
+                  setSelectedProject(project);
+                }}
               />
             ))}
           </div>
         </section>
       </div>
       {selectedProject && (
-        <div className="w-full flex justify-center absolute items-center top-1/4">
+        <div className="w-full flex justify-center fixed items-center bottom-5">
           <div className="w-fit">
             <button
-              className="text-4xl z-10 top-0 bg-red-400 text-red-800 px-2 rounded-md mb-1 w-fit hover:cursor-pointer hover:bg-red-500"
+              className="flex justify-center items-center align-start w-10 text-xl z-10 translate-y-7
+              bg-red-400 text-red-800 rounded-lg hover:cursor-pointer hover:bg-red-500"
               onClick={() => setSelectedProject(null)}
             >
               X

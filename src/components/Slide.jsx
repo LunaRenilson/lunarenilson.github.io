@@ -14,7 +14,7 @@ const Slide = ({ project, projectImage, addStyle }) => {
 
   return (
     <div className={addStyle}>
-      <section className="project-image flex flex-col gap-y-3 w-full h-full">
+      <section className="project-image flex flex-col gap-y-3 w-full h-full overflow-scroll">
         {project.tags && (
           <ul className="tags-list flex flex-wrap gap-2 w-full">
             {project.tags.map((tag, idx) => (
