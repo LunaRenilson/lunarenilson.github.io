@@ -8,7 +8,7 @@
     "results": [
       "F1-Score of 94% using LLaMA",
       "Clear distinction between classes",
-      "Comparison of Models"
+      "Successful comparison of Models"
     ],
     "tools": [
       "python.png",
