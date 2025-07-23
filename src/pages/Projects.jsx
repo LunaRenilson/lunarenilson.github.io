@@ -77,11 +77,11 @@ export default function Projects() {
         </section>
       </div>
       {selectedProject && (
-        <div className="w-full flex justify-center fixed items-center bottom-5">
+        <div className="w-full flex justify-center fixed items-center h-[50%] top-[25%]">
           <div className="w-fit">
             <button
-              className="flex justify-center items-center align-start w-10 text-xl z-10 translate-y-7
-              bg-red-400 text-red-800 rounded-lg hover:cursor-pointer hover:bg-red-500"
+              className="flex justify-center items-center align-start w-10 h-10 text-xl z-10 translate-y-10
+              bg-red-400 text-red-800 rounded-[10%] hover:cursor-pointer hover:bg-red-500"
               onClick={() => setSelectedProject(null)}
             >
               X
