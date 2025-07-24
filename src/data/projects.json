@@ -2,7 +2,13 @@
   {
     "id": 1,
     "title": "Classification of Academic Papers Using LLM",
-    "tags": ["Machine Learning", "NLP", "LLM", "Academic", "Classification"],
+    "tags": [
+      "Machine Learning",
+      "NLP",
+      "LLM",
+      "Academic",
+      "Classification"
+    ],
     "image": "confusion_matrix.png",
     "imgFigcaption": "Confusion Matrix LLaMA:8b",
     "results": [
@@ -35,21 +41,35 @@
       "Detection of Overlapping Yeasts",
       "Counting with 5% absolute error"
     ],
-    "tools": ["python.png", "opencv.png", "matplotlib.png"],
+    "tools": [
+      "python.png",
+      "opencv.png",
+      "matplotlib.png"
+    ],
     "viewMore": "https://doi.org/10.1093/jimb/kuae029",
     "summary": "Algorithm to detect and count the amount of yeasts in picures of petri dish and blade as part of academic research in Food Engineering."
   },
   {
     "id": 3,
     "title": "Freelance Website Portfolio",
-    "tags": ["Web Development", "ReactJs", "Javascript", "HTML/CSS", "UI/UX"],
+    "tags": [
+      "Web Development",
+      "ReactJs",
+      "Javascript",
+      "HTML/CSS",
+      "UI/UX"
+    ],
     "image": "Arthur-portfolio.png",
     "imgFigcaption": "Portfolio Homepage",
     "results": [
       "About me, works and research pages",
       "Color palette kept in whole website"
     ],
-    "tools": ["reactjs.png", "vitejs.png", "gh-pages.jpg"],
+    "tools": [
+      "reactjs.png",
+      "vitejs.png",
+      "gh-pages.jpg"
+    ],
     "viewMore": "https://www.github.com/arthur-amorim/portfolio",
     "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade."
   },
@@ -71,7 +91,10 @@
       "Graphs Ganaratared",
       "Cryptocoins Listed"
     ],
-    "tools": ["reactjs.png", "vitejs.png"],
+    "tools": [
+      "reactjs.png",
+      "vitejs.png"
+    ],
     "viewMore": "https://github.com/LunaRenilson/cryptoConsult",
     "summary": "Application to consult cryptocoins and it's graph of values throughout the time."
   },
@@ -105,5 +128,29 @@
     ],
     "viewMore": "https://github.com/LunaRenilson/voteSystem",
     "summary": "Development of a decentralized voting application using smart contracts and Ethereum blockchain."
+  },
+  {
+    "id": 6,
+    "title": "Population Growth Forecast",
+    "tags": [
+      "Regression",
+      "Data Science",
+      "Forecasting",
+      "Python"
+    ],
+    "image": "population-growth.png",
+    "imgFigcaption": "Population Growth regression",
+    "results": [
+      "Linear model: prediction of 8.53 billion, absolute error of 0.40 billion",
+      "Quadratic model: prediction of 8.69 billion, absolute error of 0.22 billion",
+      "Exponential model: prediction of 9.55 billion, absolute error of 1.30 billion"
+    ],
+    "tools": [
+      "python.png",
+      "matplotlib.png",
+      "numpy.png"
+    ],
+    "viewMore": "https://www.linkedin.com/feed/update/urn:li:activity:7271850479813316610/",
+    "summary": "A data science project that explores population forecasting using regression models (linear, quadratic, and exponential) based on real data from the UN Data Portal."
   }
 ]
