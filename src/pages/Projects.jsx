@@ -62,7 +62,7 @@ export default function Projects() {
 
         {/* Project Cards */}
         <section className="bg-gray-300 pb-5 flex items-center justify-center">
-          <div className="flex flex-wrap gap-10 bg-black justify-start max-w-11/12 mt-10">
+          <div className="flex flex-wrap gap-10 justify-start max-w-11/12 mt-10">
             {(filteredProjects ?? projects).map((project, idx) => (
               <CardProject
                 key={idx}
