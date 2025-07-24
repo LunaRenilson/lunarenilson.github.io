@@ -43,9 +43,8 @@ export default function Projects() {
   return (
     <div>
       <div
-        className={`flex flex-col mt-10 justify-center ${
-          selectedProject ? "blur-md" : ""
-        }`}
+        className={`flex flex-col mt-10 justify-center ${selectedProject ? "blur-md" : ""
+          }`}
         onClick={() => (selectedProject ? setSelectedProject(null) : "")}
       >
         <h1 className="text-4xl ml-10 font-bold mb-4">Projects</h1>
@@ -61,8 +60,9 @@ export default function Projects() {
           </div>
         </section>
 
-        <section className="bg-gray-300 pb-5 w-full flex items-center justify-center">
-          <div className="flex flex-wrap gap-5 gap-10 flex-wrap justify-start w-full max-w-11/12 mt-10 ">
+        {/* Project Cards */}
+        <section className="bg-gray-300 pb-5 flex items-center justify-center">
+          <div className="flex flex-wrap gap-10 bg-black justify-start max-w-11/12 mt-10">
             {(filteredProjects ?? projects).map((project, idx) => (
               <CardProject
                 key={idx}
@@ -75,7 +75,9 @@ export default function Projects() {
             ))}
           </div>
         </section>
+        {/* Project Cards */}
       </div>
+
       {selectedProject && (
         <div className="w-full flex justify-center fixed items-center h-[50%] top-[25%]">
           <div className="w-fit">
