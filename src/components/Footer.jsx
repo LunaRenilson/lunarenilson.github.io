@@ -3,8 +3,8 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 function Footer() {
   return (
     <footer className="w-full bottom-0 left-0">
-      <div className="w-full py-6 bg-gray-800 text-gray-300 flex justify-around items-center">
-        <span className="text-sm mb-2">
+      <div className="w-full py-6 bg-gray-800 text-gray-300 flex flex-col-reverse sm:flex-row justify-around items-center">
+        <span className="text-sm mb-2 border-t-1 border-gray-400 pt-2 mt-2 sm:border-0">
           © {new Date().getFullYear()} Renilson de Luna. All rights reserved.
         </span>
         <div className="flex gap-4">
