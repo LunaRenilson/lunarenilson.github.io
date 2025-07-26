@@ -14,9 +14,9 @@ const Slide = ({ project, projectImage, addStyle }) => {
 
   return (
     <div className={addStyle}>
-      <section className="project-image flex flex-col gap-y-3 w-full h-full overflow-scroll">
+      <section className="project-image flex flex-col gap-y-3 w-full h-full">
         {project.tags && (
-          <ul className="tags-list flex flex-wrap gap-2 w-full">
+          <ul className="tags-list flex flex-wrap gap-2 w-full items-center justify-center">
             {project.tags.map((tag, idx) => (
               <li
                 key={idx}
@@ -28,7 +28,7 @@ const Slide = ({ project, projectImage, addStyle }) => {
           </ul>
         )}
 
-        <figure className="rounded-2xl h-full p-1">
+        <figure className="rounded-2xl h-full p-1 flex flex-col items-center">
           <img
             src={projectImage}
             alt={project.title}
@@ -67,7 +67,7 @@ const Slide = ({ project, projectImage, addStyle }) => {
                     <img
                       src={getFeaturedIcon(tool)}
                       alt={"image of " + tool}
-                      className="h-[60px] w-[50px] bg-white border-white border-1"
+                      className="h-[60px] w-[60px] bg-white border-white border-1"
                     />
                   </li>
                 ))}

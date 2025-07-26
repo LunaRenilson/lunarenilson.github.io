@@ -10,7 +10,7 @@ import featuredProjects from "@data/featuredProjects.json";
 
 function Carousel() {
   const autoplay = Autoplay({
-    delay: 5000,
+    delay: 4000,
     stopOnMouseEnter: true, // pausa quando mouse estiver em cima
   });
   const wheelGestures = WheelGesturesPlugin();
@@ -41,6 +41,7 @@ function Carousel() {
     eager: true,
     import: "default",
   });
+
 
   function getFeaturedImage(img) {
     return images[`/src/assets/project_images/${img}`] || null;
