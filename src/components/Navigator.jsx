@@ -5,7 +5,7 @@ import { GrHomeRounded } from "react-icons/gr";
 import perfil from "@assets/perfil.jpeg";
 import logoUnicamp from "@assets/logoUnicamp.png";
 import { useEffect, useState } from "react";
-import { IoMdMenu } from "react-icons/io";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 function Navigator() {
 	const iconSize = 30;
@@ -18,22 +18,19 @@ function Navigator() {
 
 
 	// Atualiza o estado inicial e monitora redimensionamento
+	// Corrigindo o useEffect para atualizar isMobile
 	useEffect(() => {
-		// Fecha o menu se a tela for mobile no carregamento
-		if (isMobile) {
-			setMenuOpen(false);
-		}
-
-		// Atualiza o estado quando a janela for redimensionada
 		const handleResize = () => {
-			if (!isMobile) {
-				setMenuOpen(false); // Fecha o menu se a tela aumentar
-			}
+			const mobile = window.matchMedia("(max-width: 640px)").matches;
+			setIsMobile(mobile);
 		};
+
+		// Executa imediatamente para definir o estado inicial
+		handleResize();
 
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+	}, []); // Removemos a dependência isMobile para evitar loop
 
 	// Verifica scroll
 	useEffect(() => {
@@ -45,7 +42,17 @@ function Navigator() {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [window.scrollY]);
 
-
+	const verifyMobileOptions = (styleOption1, styleOption2) => {
+		if (isMobile) {
+			if (menuOpen) {
+				return styleOption1
+			} else {
+				return styleOption2
+			}
+		} else {
+			return ''
+		}
+	}
 
 	return (
 		<header
@@ -54,26 +61,25 @@ function Navigator() {
 		>
 			{/* Botão Mobile (sandwich) - visível em telas pequenas */}
 			<button
-				className="md:hidden focus:outline-none"
+				className="sm:hidden focus:outline-none"
 				onClick={() => setMenuOpen(prev => !prev)}
 			>
 				{/* Ícone do sandwich */}
-				<div className="space-y-2">
-					<IoMdMenu size={40} />
-				</div>
+				<IoMdMenu size={40} className={`duration-300 ${verifyMobileOptions('rotate-z-90', 'rotate-0')}`} />
+
 			</button>
-			
-			<div className={`Icons gap-7 items-center font-bold w-fit ${menuOpen ? 'flex flex-row-reverse' : 'hidden'}`}>
+
+			<div className={`Icons flex flex-row gap-7 items-center font-bold w-fit duration-300`}>
 
 				<img
 					src={perfil}
 					alt="Imagem de perfil"
 					width={55}
-					className={`rounded-full duration-300 ${isScrolled ? 'scale-0 sm:scale-100' : ''}`}
+					className={`rounded-full`}
 				/>
 
 				<div className="links-items flex gap-x-3">
-					<Link to="/" className="relative group items-center flex flex-col">
+					<Link to="/" className={`relative group items-center flex flex-col ${verifyMobileOptions('duration-300 opacity-100 scale-100', 'duration-500 opacity-0 scale-y-0')}`}>
 						<GrHomeRounded
 							size={iconSize - 3}
 							className="translate-y-3 group-hover:translate-0 duration-300"
@@ -85,7 +91,7 @@ function Navigator() {
 
 					<Link
 						to="/projects"
-						className="relative group items-center flex flex-col"
+						className={`relative group items-center flex flex-col ${verifyMobileOptions('duration-500 opacity-100 scale-100', 'duration-300 opacity-0 scale-y-0')}`}
 					>
 						<FaRegFolder
 							size={iconSize}
@@ -98,7 +104,7 @@ function Navigator() {
 
 					<Link
 						to="/contact"
-						className="relative group items-center flex flex-col"
+						className={`relative group items-center flex flex-col ${verifyMobileOptions('duration-700 opacity-100 scale-100', 'duration-100 opacity-0 scale-y-0')}`}
 					>
 						<FiAtSign
 							size={iconSize}
@@ -112,9 +118,9 @@ function Navigator() {
 			</div>
 
 
-			<div className={`formation w-fit absolute right-0 top-2 items-center justify-center h-full gap-4 ${menuOpen ? 'hidden' : 'flex'}`}>
+			<div className={`formation w-fit absolute flex right-0 top-2 items-center justify-center h-full gap-4 duration-200 ${verifyMobileOptions('duration-300 opacity-0 scale-y-0', 'duration-100 opacity-100 scale-y-100')}`}>
 				<div className={`text-right ${!isScrolled ? "sm:translate-0 " : "sm:translate-x-15 sm:-translate-y-3"} duration-400`}>
-					<p className={`font-bold text-xl sm:text-2xl`}>Renilson Luna</p>
+					<p className={`font-bold text-xl sm:text-2xl`}> Renilson Luna</p>
 					<p className="text-[12px] sm:text-sm text-gray-600">Computer Engineering </p>
 				</div>
 				<img
