@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 import "./index.css";
 
 import App from "./App.jsx";
@@ -14,37 +14,26 @@ const RootLayout = () => (
   <div className="min-h-screen flex flex-col">
     <Navigator />
     <main className="flex-grow mt-25">
-      <Outlet />
+      <Outlet /> {/* Renderiza as rotas aninhadas aqui */}
     </main>
     <Footer />
   </div>
 );
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        path: "/",
-        element: <App />,
-      },
-      {
-        path: "/Contact",
-        element: <Contact />,
-      },
-      {
-        path: "/projects",
-        element: <Projects />,
-      },
-    ],
-  },
-]);
+const AppRouter = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
+        <Route index element={<App />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="projects" element={<Projects />} />
+      </Route>
+    </Routes>
+  </Router>
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AppRouter />
   </StrictMode>
 );
