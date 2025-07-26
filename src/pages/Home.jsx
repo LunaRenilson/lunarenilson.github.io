@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="w-full bg-gray-800">
       <section className="Introducing relative flex flex-col items-center justify-center p-8 ">
-        <article className="w-2/3 text-white mt-5 relative justify-center flex flex-col items-center">
+        <article className="lg:w-2/3 text-white mt-5 relative justify-center flex flex-col items-center">
           <h1 className="font-bold text-3xl mb-3 text-lef w-full">
             Hello, I'm Renilson Luna!
           </h1>
@@ -23,8 +23,9 @@ export default function Home() {
           </p>
         </article>
 
-        <div className="flex w-2/3 text-white relative justify-around mt-25 p-5">
-          <section className="interests w-1/2">
+        <div className=" mt-5 gap-y-5 flex flex-col-reverse lg:flex-row  w-full lg:w-2/3 text-white relative justify-around lg:mt-25 lg:p-5">
+
+          <section className="interests lg:w-1/2 ">
             <h2 className="text-2xl font-bold mb-3">Interests</h2>
             <ul className="flex flex-col gap-y-4">
               <li className="flex items-center gap-5 font-medium">
@@ -50,7 +51,7 @@ export default function Home() {
             </ul>
           </section>
 
-          <section className="Objectives w-1/2">
+          <section className="Objectives lg:w-1/2 mt-2">
             <h2 className="text-2xl font-bold mb-3">Objectives</h2>
             <p className="text-justify">
               As a computer engineer, my goal is work on develop scalable,
