@@ -52,19 +52,19 @@ function Carousel() {
       className="embla w-full relative justify-center items-center flex flex-col overflow-hidden bg-gradient-to-b from-transparent py-2 to-gray-700 border-gray-500 border rounded-4xl shadow-gray-600 shadow-2xl"
       ref={emblaRef}
     >
-      <div className="flex w-10/12">
+      <div className="flex w-full lg:w-10/12">
         {featuredProjects.map((project, index) => (
-          <div className="min-w-[80%] p-3" key={index}>
+          <div className="min-w-[90%] lg:min-w-[80%] p-3" key={index}>
             <Slide
               project={project}
               projectImage={getFeaturedImage(project.image)}
-              addStyle={"slide-container flex items-center justify-center p-4 gap-5 w-full h-full bg-gray-100 border-1 border-gray-300 shadow-2xl rounded-2xl py-10"}
+              addStyle={"slide-container flex flex-col md:flex-row items-center justify-center px-2 lg:p-4 sm:gap-5 w-full h-full bg-gray-100 border-1 border-gray-300 shadow-2xl rounded-2xl py-3 sm:py-10"}
             />
           </div>
         ))}
       </div>
 
-      <div className="embla__buttons absolute flex justify-center mt-4 w-full h-full">
+      <div className="embla__buttons hidden lg:flex justify-center mt-4 w-full h-full">
         <div className="p-5 gap-15 rounded-full flex">
           <button
             onClick={() => embla && embla.scrollPrev()}

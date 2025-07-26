@@ -63,10 +63,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-10 w-full mx-auto">
+      <section className="mt-10 w-full mx-auto lg:p-5">
         <article className="featured-projects flex flex-col items-center justify-center w-full mx-auto">
           <div className="flex items-baseline gap-2">
-            <h2 className="font-bold text-white text-4xl mt-5">
+            <h2 className="font-bold text-white text-xl lg:text-4xl mt-5">
               FEATURED PROJECTS
             </h2>
             <Link to="/projects">
@@ -76,7 +76,7 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="w-full mx-auto p-4">
+          <div className="w-full mx-auto">
             <Carousel />
           </div>
         </article>
