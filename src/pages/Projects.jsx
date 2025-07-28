@@ -48,16 +48,17 @@ export default function Projects() {
         onClick={() => (selectedProject ? setSelectedProject(null) : "")}
       >
         <h1 className="text-4xl ml-10 font-bold mb-4">Projects</h1>
-        <section className="ml-10 pb-5 w-1/2 flex flex-col border-b-1 border-gray-500">
-          <div className="flex gap-4 items-baseline mb-4">
+        <section className="ml-10 pb-5 w-2/3 sm:w-1/2 flex flex-col border-b-1 border-gray-500">
+          <div className="flex flex-col sm:flex-row sm:gap-4 items-baseline mb-4">
             <p className="mb-2">Search Project</p>
             <input
               type="text"
-              className="border-1 h-7 border-gray-500 rounded-sm outline-none shadow-lg p-5"
-              placeholder="Search tag, title or description"
+              className="border-1 h-7 w-full sm:w-fit border-gray-500 rounded-sm outline-none shadow-lg p-5"
+              placeholder="tag, title or description"
               onChange={handleSearch}
             />
           </div>
+
         </section>
 
         {/* Project Cards */}
