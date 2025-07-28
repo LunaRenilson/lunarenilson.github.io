@@ -41,13 +41,13 @@ const Slide = ({ project, projectImage, addStyle }) => {
 
       <section className="project-details flex px-3 flex-col gap-y-3 sm:gap-y-8 lg w-full h-full">
         <div className="title-container w-full items-center">
-          <h2 className="font-bold text-[14px] sm:text-lg  mb-2">{project.title}</h2>
+          <h2 className="font-bold text-[14px] sm:text-lg xl:text-2xl  mb-2">{project.title}</h2>
           <p className="text-[10px] sm:text-md sm:text-[14px] 2xl:text-lg">{project.summary}</p>
         </div>
 
-        <div className="details-container flex flex-row gap-3 sm:justify-around sm:w-full md:w-fit">
+        <div className="details-container flex flex-row gap-3 xl:gap-x-10 sm:justify-around sm:w-full md:w-fit">
           <div className="">
-            <h3 className="font-bold text-sm sm:text-md 2xl:text-lg">Results</h3>
+            <h3 className="font-bold text-sm sm:text-sm xl:text-2xl">Results</h3>
             <ul className="list-disc list-inside text-[10px] sm:text-[14px] 2xl:text-lg">
               {project.results &&
                 project.results.map((result, idx) => (
@@ -57,7 +57,7 @@ const Slide = ({ project, projectImage, addStyle }) => {
           </div>
 
           <div className="tools-container h-full hidden sm:block">
-            <h3 className="font-bold text-sm sm:text-md 2xl:text-lg mb-1">Tools Used</h3>
+            <h3 className="font-bold text-sm sm:text-md 2xl:text-2xl mb-1">Tools Used</h3>
             <ul className="list-inside flex text-[15px] rounded-md gap-2 w-full items-center">
               {project.tools &&
                 project.tools.map((tool, idx) => (
@@ -75,9 +75,9 @@ const Slide = ({ project, projectImage, addStyle }) => {
 
         <Link
           to={project.viewMore}
-          className="left-0 my-5 flex items-center hover:cursor-pointer gap-2 text-sm sm:text-[16px] w-fit hover:text-blue-500"
+          className="left-0 my-5 flex items-center hover:cursor-pointer gap-2 text-sm sm:text-[16px] xl:text-lg xl:border-b-1 border-b-gray-400 w-fit hover:text-blue-500"
         >
-          <button className="">
+          <button className="hover:cursor-pointer">
             Acess Project
           </button>
           <FaArrowRight className="w-[15px] sm:w-[30px]" />
