@@ -20,13 +20,13 @@
           "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade as part of academic research in Food Engineering."
      },
      {
-          "title": "Website Portfolio",
-          "tags": ["Web Development", "ReactJs", "Javascript", "HTML/CSS", "UI/UX"],
-          "image": "Arthur-portfolio.png",
-          "imgFigcaption": "Portfolio Homepage",
-          "results": ["About me, works and research pages", "Color palette kept in whole website"],
-          "tools": ["reactjs.png", "vitejs.png", "gh-pages.jpg"],
-          "viewMore": "https://www.github.com/arthur-amorim/portfolio",
-          "summary": "Implementation of an algorithm to autimatically detect and count the amount of yeilds in picures of petri dish and blade."
+          "title": "Vote System Web3 Dapp",
+          "tags": ["Blockchain", "Web3 Development", "ReactJs", "Solidity", "Hardhat 2"],
+          "image": "voteSystem.png",
+          "imgFigcaption": "Vote System Dapp Interface",
+          "results": ["Smart Contract for Voting", "Frontend with ReactJs", "Deployed on Testnet"],
+          "tools": ["react.png", "solidity.png", "hardhat.png", "metaMask.png"],
+          "viewMore": "https://github.com/LunaRenilson/web3-voteSystem",
+          "summary": "A decentralized application (Dapp) that allows users to create and participate in voting processes using blockchain technology."
      }
 ]
