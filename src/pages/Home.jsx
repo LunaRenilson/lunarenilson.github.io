@@ -16,10 +16,13 @@ export default function Home() {
             Hello, I'm Renilson Luna!
           </h1>
           <p className="text-lg flex w-full text-justify">
-            I'm a Computer Engineer student passionate about Software, Machine
-            Learning, and Algorithms. I currently study at UNICAMP, where I
-            develop projects ranging from Web Development to applied artificial
-            intelligence.
+            I’m <span className="font-bold">Blockchain Developer at CPQD</span> and computer engineer student at UNICAMP
+            where I apply my skills to build innovative decentralized solutions, in private and public blockchain networks. </p>
+            <br />
+          <p className="text-lg mt-3 text-justify">
+            I have experience in projects across Blockchain, Web Development, Web3, Machine Learning, and Image Processing, 
+            exploring everything from application design and implementation to intelligent models that extract value from complex data. 
+            I’m driven by challenges that combine technology and real-world impact, always striving to learn and create solutions that make a difference.
           </p>
         </article>
 
