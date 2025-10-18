@@ -121,7 +121,7 @@ function Navigator() {
 			<div className={`formation w-fit absolute flex right-0 top-2 items-center justify-center h-full gap-4 duration-200 ${verifyMobileOptions('duration-300 opacity-0 scale-y-0', 'duration-100 opacity-100 scale-y-100')}`}>
 				<div className={`text-right ${!isScrolled ? "sm:translate-0 " : "sm:translate-x-15 sm:-translate-y-3"} duration-400`}>
 					<p className={`font-bold text-xl sm:text-2xl`}> Renilson Luna</p>
-					<p className="text-[12px] sm:text-sm text-gray-600 font-semibold">Blockchain & Web3 Developer @ <a
+					<p className="text-[12px] sm:text-sm text-gray-600 font-semibold">Software Developer @ <a
 						href="https://www.cpqd.com.br"
 						target="_blank"
 						class="bg-gradient-to-r from-yellow-400 to-green-500 bg-clip-text text-transparent font-semibold hover:from-green-400 hover:to-yellow-500 transition-all duration-200"
