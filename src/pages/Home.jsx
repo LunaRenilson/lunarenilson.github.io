@@ -1,5 +1,6 @@
 import softwareDevelopment from "@assets/software-development.png";
 import softwareEngineering from "@assets/software-engineering.png";
+import Blockchain from "@assets/blockchain.png";
 import brainstorm from "@assets/brainstorm.png";
 import Carousel from "@components/Carousel";
 import Footer from "../components/Footer";
@@ -15,8 +16,8 @@ export default function Home() {
           <h1 className="font-bold text-3xl mb-3 text-lef w-full">
             Hello, I'm Renilson Luna!
           </h1>
-          <p className="text-lg flex w-full text-justify">
-            I’m <span className="font-bold">Blockchain Developer at CPQD</span> and computer engineer student at UNICAMP
+          <p className="text-lg flex flex-row w-full text-justify">
+            I’m Blockchain Developer at CPQD and computer engineer student at UNICAMP
             where I apply my skills to build innovative decentralized solutions, in private and public blockchain networks. </p>
             <br />
           <p className="text-lg mt-3 text-justify">
@@ -31,6 +32,17 @@ export default function Home() {
           <section className="interests lg:w-1/2 ">
             <h2 className="text-2xl font-bold mb-3">Interests</h2>
             <ul className="flex flex-col gap-y-4">
+
+              <li>
+                <div className="flex items-center gap-5 font-medium">
+                  <img
+                    src={Blockchain}
+                    alt="Icon blockchain"
+                    width={iconSize}
+                  />
+                  Blockchain Development & Web3
+                </div>
+              </li>
               <li className="flex items-center gap-5 font-medium">
                 <img src={brainstorm} alt="Icon brainstorm" width={iconSize} />
                 Machine Learning & LLM Models
