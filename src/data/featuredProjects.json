@@ -25,7 +25,7 @@
           "image": "voteSystem.png",
           "imgFigcaption": "Vote System Dapp Interface",
           "results": ["Smart Contract for Voting", "Frontend with ReactJs", "Deployed on Testnet"],
-          "tools": ["react.png", "solidity.png", "hardhat.png", "metaMask.png"],
+          "tools": ["reactjs.png", "solidity.jpg", "hardhat.jpeg", "metaMask.png"],
           "viewMore": "https://github.com/LunaRenilson/web3-voteSystem",
           "summary": "A decentralized application (Dapp) that allows users to create and participate in voting processes using blockchain technology."
      }
